@@ -44,4 +44,4 @@ This is the last job where it would install all dependency for our app in the we
 ![job4](Screenshots/job4.png)
 
 
-## [Playbooks](Playbooks)
+## [Explore Playbooks](Playbooks)

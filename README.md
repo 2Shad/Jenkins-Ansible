@@ -20,6 +20,8 @@ The first Job is for provisioning 3 EC2 instances; An web and db VM, and a contr
 
 ![job1](Screenshots/job1.png)
 
+After this job is done, go to the jeninks' instance's terminal, add all the VMs to Ansible's hosts file, switch to `jenkins` user, and do `ansible all -m ping` and add all the `fingerprints`.
+
 
 >### Second Job
 

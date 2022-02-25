@@ -18,21 +18,23 @@ Ensure that all the Jobs involving Ansible Playbooks has an `Extra Variable` to 
 
 The first Job is for provisioning 3 EC2 instances; An web and db VM, and a controller VM.
 
-![job1](Screenshots/job2.png)
+![job1](Screenshots/job1.png)
+
+After this job is done, go to the jeninks' instance's terminal, add all the VMs to Ansible's hosts file, switch to `jenkins` user, and do `ansible all -m ping` and add all the `fingerprints`.
 
 
 >### Second Job
 
 In here we will install Ansible, and its dependencies on the controller VM.
 
-![job2](Screenshots/job3.png)
+![job2](Screenshots/job2.png)
 
 
 >### Third Job
 
 This job would be to install mongodb and change configuration, so the web VM can connect without any issues.
 
-![job3](Screenshots/job4.png)
+![job3](Screenshots/job3.png)
 
 
 >### Fourth Job
@@ -40,3 +42,6 @@ This job would be to install mongodb and change configuration, so the web VM can
 This is the last job where it would install all dependency for our app in the web VM, as well as connect it to the db VM and lastly start our app so its accessible from the web.
 
 ![job4](Screenshots/job4.png)
+
+
+## [Playbooks](Playbooks)

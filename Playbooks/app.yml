@@ -1,0 +1,23 @@
+- name: copy
+  import_playbook: copy.yml
+  
+- name: update upgrade
+  import_playbook: nginx.yml
+
+- name: Install mongodb
+  import_playbook: proxy.yaml
+  
+- name: update upgrade
+  import_playbook: nginx-re.yml
+  
+- name: Install mongodb
+  import_playbook: node.yaml
+  
+- name: update upgrade
+  import_playbook: npm.yml
+  
+- name: update upgrade
+  import_playbook: connect.yml
+  
+- name: update upgrade
+  import_playbook: start.yml

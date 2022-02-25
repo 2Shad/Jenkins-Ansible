@@ -1,0 +1,9 @@
+---
+- hosts: web
+  gather_facts: yes
+  tasks:
+  - name: DB_HOST
+    become_user: ubuntu
+    ansible.builtin.lineinfile:
+      path: /home/ubuntu/.bashrc
+      line: export DB_HOST=mongodb://3.249.73.94:27017/posts

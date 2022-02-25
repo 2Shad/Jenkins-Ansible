@@ -1,0 +1,8 @@
+- name: update upgrade
+  import_playbook: nginx.yml
+
+- name: Install mongodb
+  import_playbook: proxy.yaml
+  
+- name: update upgrade
+  import_playbook: nginx-re.yml

@@ -1,0 +1,8 @@
+---
+- hosts: web
+  gather_facts: yes
+  tasks:
+  - name: Copy app
+    copy:
+      src: /var/lib/jenkins/sync/app
+      dest: /home/ubuntu/
